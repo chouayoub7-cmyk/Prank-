@@ -1,1 +1,111 @@
-<html><body style='background:black; color:red;'><h1>SYSTEM COMPROMISED</h1><script>alert('SECURITY BREACH');</script></body></html>
+<html>
+<head>
+<style>
+body {
+  background: #000;
+  color: #0f0;
+  font-family: 'Courier New', monospace;
+  margin: 0;
+  padding: 20px;
+  overflow: hidden;
+}
+.container {
+  max-width: 100%;
+  animation: flicker 0.15s infinite;
+}
+@keyframes flicker {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.95; }
+}
+h1 {
+  font-size: 48px;
+  margin: 0 0 20px 0;
+  text-shadow: 0 0 10px #0f0;
+  animation: glow 2s ease-in-out infinite;
+}
+@keyframes glow {
+  0%, 100% { text-shadow: 0 0 10px #0f0; }
+  50% { text-shadow: 0 0 20px #0f0, 0 0 30px #0f0; }
+}
+.warning {
+  border: 2px solid #0f0;
+  padding: 15px;
+  margin: 20px 0;
+  background: rgba(0, 255, 0, 0.05);
+}
+.logs {
+  background: #111;
+  border: 1px solid #0f0;
+  padding: 15px;
+  margin: 20px 0;
+  max-height: 300px;
+  overflow-y: auto;
+  font-size: 12px;
+  line-height: 1.5;
+}
+.log-line {
+  margin: 5px 0;
+  opacity: 0.8;
+}
+.error { color: #ff0000; }
+.warning-text { color: #ffff00; }
+button {
+  background: #0f0;
+  color: #000;
+  border: none;
+  padding: 10px 20px;
+  margin: 10px 5px 10px 0;
+  cursor: pointer;
+  font-weight: bold;
+  font-family: 'Courier New', monospace;
+}
+button:hover {
+  background: #00ff00;
+  box-shadow: 0 0 10px #0f0;
+}
+</style>
+</head>
+<body>
+<div class="container">
+<h1>⚠️ SYSTEM COMPROMISED ⚠️</h1>
+
+<div class="warning">
+  <strong>CRITICAL SECURITY ALERT</strong><br>
+  Your system has been infected with ransomware. All files have been encrypted.
+</div>
+
+<div class="logs">
+  <div class="log-line">[SYSTEM] Boot sequence initiated...</div>
+  <div class="log-line">[SYSTEM] Loading kernel modules...</div>
+  <div class="log-line warning-text">[WARNING] Unauthorized access detected!</div>
+  <div class="log-line error">[ERROR] Security protocols disabled</div>
+  <div class="log-line error">[ERROR] File encryption in progress: 45%</div>
+  <div class="log-line">[MALWARE] Exfiltrating sensitive data...</div>
+  <div class="log-line">[MALWARE] C:\Users\Documents\passwords.txt - ENCRYPTED</div>
+  <div class="log-line">[MALWARE] C:\Users\Pictures\photos.jpg - ENCRYPTED</div>
+  <div class="log-line error">[CRITICAL] All user files encrypted!</div>
+  <div class="log-line warning-text">[RANSOM] Pay 500 BTC to recover your files</div>
+</div>
+
+<div class="warning">
+  <strong>Your files have been encrypted!</strong><br>
+  Send 500 Bitcoin to recover your data...<br>
+  Just kidding! 😄 You've been pranked!
+</div>
+
+<button onclick="alert('Got you! This is just a prank website 🤣')">Click Me</button>
+<button onclick="location.href='https://www.youtube.com/watch?v=dQw4w9WgXcQ'">Restore Files</button>
+
+</div>
+
+<script>
+// Fun prank - make the page feel "hacked"
+document.addEventListener('keypress', function(e) {
+  if(Math.random() > 0.7) {
+    document.body.style.transform = 'rotate(' + (Math.random() > 0.5 ? 1 : -1) + 'deg)';
+    setTimeout(() => { document.body.style.transform = 'rotate(0deg)'; }, 100);
+  }
+});
+</script>
+</body>
+</html>
